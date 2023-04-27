@@ -1,6 +1,3 @@
-# Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
-
 name: Build and deploy Node.js app to Azure Web App - frontend-ai-app-d
 
 on:
@@ -26,16 +23,14 @@ jobs:
           npm install
           npm run build --if-present
 
-        #zip artifact
-      - name: Zip artifact for deployment
-        run:
-          zip release.zip ./build/* -r #get files and folder in build folder and
-          #compress into release.zip with linux zip command
-      - name: Upload artifact for deployment job
+      - name: Copy web.config to build folder
+        run: cp web.config build/
+
+      - name: Upload build folder as artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: release.zip #add release.zip to path
+          path: build
 
   deploy:
     runs-on: ubuntu-latest
@@ -49,10 +44,6 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: node-app
-
-      #unzip artifact when deploying
-      - name: Unzip artifact for deployment
-        run: unzip release.zip #Extract release.zip with unzip command
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
