@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import About from './components/AboutPage/About';
 import Navbar from './Navbar/Navbar';
+import Policies from './Policies/Policies';
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
         <Routes>
           <Route path="/om" element={<About />} />
           <Route path="*" element={<About />} />
+          <Route path="/riktlinjer" element={<Policies />} />
         </Routes>
       </div>
     </Router>

@@ -1,0 +1,48 @@
+{
+  "title": "Riktlinjer för användning av AI",
+  "purpose": "Syftet med denna riktlinje är att fastställa riktlinjer för ansvarsfull och effektiv användning av artificiell intelligens (AI) och AI-verktyg inom Bostads AB Mimer. Vår organisation strävar efter att använda AI-teknik för att öka operationell effektivitet, förbättra beslutsfattandet och främja innovation, samtidigt som man hanterar risker och säkerställer att etiska överväganden upprätthålls.",
+  "scope": "Denna riktlinje gäller för alla anställda, entreprenörer och andra intressenter som använder, utvecklar eller interagerar med AI-system eller AI-verktyg inom Bostads AB Mimer.",
+  "definitions": [
+    {
+      "term": "Artificiell intelligens (AI)",
+      "definition": "Avser utvecklingen av datorsystem som kan utföra uppgifter som normalt kräver mänsklig intelligens, såsom visuell perception, taligenkänning, beslutsfattande och språklig översättning."
+    },
+    {
+      "term": "AI-verktyg",
+      "definition": "Programvara eller applikationer som använder AI-teknik för att utföra specifika uppgifter eller bistå i beslutsprocesser."
+    }
+  ],
+  "principles": [
+    "AI-system och AI-verktyg ska användas för att stödja, förbättra och komplettera mänskligt beslutsfattande, men ska inte ersätta behovet av kritiskt tänkande och personligt omdöme.",
+    "Användningen av AI bör vara transparent, och dess beslutsprocesser bör kunna förklaras för intressenter.",
+    "AI-teknik måste användas på ett sätt som respekterar integritet och följer relevanta dataskyddsbestämmelser, såsom GDPR.",
+    "Anskaffning, utveckling och implementering av AI-system och AI-verktyg bör prioritera säkerhet, pålitlighet och skydd.",
+    "AI-applikationer ska utformas och användas på ett sätt som minimerar partiskhet och främjar rättvisa, inkludering och mångfald."
+  ],
+  "responsibilities": [
+    {
+      "role": "Anställda",
+      "responsibility": "Ansvarar för att sätta sig in i denna riktlinje och söka klargöranden vid behov."
+    },
+    {
+      "role": "Chefer och ansvariga",
+      "responsibility": "Ska se till att deras team förstår och följer denna riktlinje."
+    },
+    {
+      "role": "IT-avdelningen",
+      "responsibility": "Ansvarar för att erbjuda tekniskt stöd, vägledning och utbildning om AI-system och AI-verktyg."
+    },
+    {
+      "role": "Informationsansvarig",
+      "responsibility": "Är ansvarig för att säkerställa att AI-relaterade aktiviteter följer dataskyddsförordningar."
+    }
+  ],
+  "training": "Bostads AB Mimer kommer att erbjuda regelbunden utbildning och resurser till anställda om AI-teknik, AI-verktyg och ansvarsfull användning. Anställda är skyldiga att delta i dessa utbildningar för att säkerställa att de är kunniga om AI och dess tillämpningar inom organisationen.",
+  "risk_management": [
+    "Innan något AI-system eller AI-verktyg implementeras måste en noggrann riskbedömning genomföras, med beaktande av potentiella effekter på integritet, säkerhet och andra riskområden.",
+    "AI-system och AI-verktyg måste genomgå regelbundna revisioner och granskningar för att identifiera och minska risker samt säkerställa att de fortsätter att följa denna riktlinje.",
+    "Eventuella problem eller incidenter som involverar AI bör omedelbart rapporteras till berörd chef, IT-avdelningen och Informationsansvarig."
+  ],
+  "violation": "Brott mot denna riktlinje kan leda till disciplinära åtgärder, upp till och inklusive avsked. Rättsliga åtgärder kan också vidtas om en anställds åtgärder som involverar AI bedöms vara olagliga eller orsakar betydande skada för organisationen eller dess intressenter.",
+  "review": "Denna riktlinje kommer att ses över och uppdateras regelbundet för att säkerställa att den förblir relevant och effektiv i ljuset av nya AI-utvecklingar och Bostads AB Mimers föränderliga behov."
+}
