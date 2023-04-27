@@ -1,0 +1,185 @@
+.syntaxHighlighter {
+  display: block;
+}
+
+.inlineText {
+  display: inline-block;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.chatWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 80%;
+}
+
+.messagesContainer {
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: calc(100% - 3rem);
+}
+
+.chatBox {
+  padding: 1rem;
+  width: 80%;
+  height: 80%;
+  background-color: #f8f8f8;
+  border-radius: 10px;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.inputContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.inputField {
+  flex-grow: 1;
+  height: 3rem;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.loginMessage {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ffffff;
+  padding: 1rem;
+}
+
+.sendButton {
+  height: 3rem;
+  width: 4rem;
+  background-color: #e3205e;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sendButton:hover {
+  background-color: #3e8e41;
+}
+
+.userMessage,
+.gptMessage {
+  margin-bottom: 1rem; /* Adjust this value to create more or less space between messages */
+}
+
+.messageIcon {
+  margin-right: 0.5rem;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.loadingMessage {
+  font-style: italic;
+  color: #e3205e;
+}
+
+.loading {
+  animation: flash 1s infinite;
+}
+
+@keyframes flash {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.tableWrapper {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 1rem;
+  background-color: #f2f2f2; /* Change this to the desired background color */
+}
+
+th,
+td {
+  border: 1px solid #ccc;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #e0e0e0;
+  font-weight: bold;
+  font-size: 1.2rem; /* Increase the header font size */
+}
+
+tr:nth-child(even) {
+  background-color: #f8f8f8;
+}
+
+tr:hover {
+  background-color: #ddd;
+}
+
+.tsvTable {
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.markdownTable {
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  margin-bottom: 1rem;
+}
+
+.customHeader {
+  font-weight: bold;
+}
+
+.copyButton {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 8px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition-duration: 0.4s;
+}
+
+.copyButton:hover {
+  background-color: #0056b3;
+  color: white;
+}

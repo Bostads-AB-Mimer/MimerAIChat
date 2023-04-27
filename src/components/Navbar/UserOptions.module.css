@@ -1,0 +1,12 @@
+.user-options {
+  display: flex;
+  align-items: center;
+  gap: 0, 5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.user-email {
+  font-size: 0.675rem;
+  margin-right: 1rem;
+}

@@ -2,14 +2,14 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import About from './components/AboutPage/About';
-import Navbar from './components/Navbar/Navbar';
+import NavbarComponent from './components/Navbar/Navbar';
 import Policies from './components/Policies/Policies';
 
 function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
+        <NavbarComponent />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
