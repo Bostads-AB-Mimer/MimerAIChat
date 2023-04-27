@@ -2,8 +2,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import logo from './logo.svg';
 import './App.css';
 import About from './components/AboutPage/About';
-import Navbar from './Navbar/Navbar';
-import Policies from './Policies/Policies';
+import Navbar from './components/Navbar/Navbar';
+import Policies from './components/Policies/Policies';
 
 function App() {
   return (
