@@ -23,9 +23,6 @@ jobs:
           npm install
           npm run build --if-present
 
-      - name: Copy web.config to build folder
-        run: cp web.config build/
-
       - name: Upload build folder as artifact for deployment job
         uses: actions/upload-artifact@v2
         with:
@@ -52,4 +49,4 @@ jobs:
           app-name: 'frontend-ai-app-d'
           slot-name: 'Production'
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E4E33FA3C68844B19731B4C527D34B26 }}
-          package: .
+          package: ./build
