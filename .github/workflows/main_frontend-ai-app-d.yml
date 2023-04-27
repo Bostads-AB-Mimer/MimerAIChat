@@ -25,7 +25,6 @@ jobs:
 
       - name: Zip artifact for deployment
         run: |
-          cp public/web.config build/web.config
           zip release.zip ./build/* -r
 
       - name: Upload artifact for deployment job
@@ -50,7 +49,6 @@ jobs:
       - name: Unzip artifact for deployment
         run: |
           unzip release.zip
-          cp build/web.config web.config
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
