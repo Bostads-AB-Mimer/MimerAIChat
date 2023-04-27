@@ -1,34 +1,38 @@
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import ChatComponent from './components/ChatComponent/ChatComponent';
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import About from './components/AboutPage/About';
-import NavbarComponent from './components/Navbar/Navbar';
 import Policies from './components/Policies/Policies';
+import './App.css';
+import NavbarComponent from './components/Navbar/Navbar';
+
+// Import your components for each route here
+// import Riktlinjer from './components/Riktlinjer';
+// import UserCase from './components/UserCase';
+// import Login from './components/Login';
 
 function App() {
   return (
     <Router>
       <div className="App">
         <NavbarComponent />
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-        <Routes>
-          <Route path="/om" element={<About />} />
-          <Route path="*" element={<About />} />
-          <Route path="/riktlinjer" element={<Policies />} />
-        </Routes>
+        <main>
+          <Routes>
+            <Route path="/" element={<ChatComponent />} />
+            <Route
+              path="/om"
+              element={
+                <div>
+                  <About />
+                </div>
+              }
+            />
+
+            <Route path="/chatt" element={<ChatComponent />} />
+            <Route path="/riktlinjer" element={<Policies />} />
+          </Routes>
+        </main>
       </div>
     </Router>
   );
