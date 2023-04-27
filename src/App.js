@@ -25,6 +25,7 @@ function App() {
         </header>
         <Routes>
           <Route path="/om" element={<About />} />
+          <Route path="*" element={<About />} />
         </Routes>
       </div>
     </Router>
