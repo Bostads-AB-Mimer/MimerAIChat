@@ -39,10 +39,9 @@
   ],
   "training": "Bostads AB Mimer kommer att erbjuda regelbunden utbildning och resurser till anställda om AI-teknik, AI-verktyg och ansvarsfull användning. Anställda är skyldiga att delta i dessa utbildningar för att säkerställa att de är kunniga om AI och dess tillämpningar inom organisationen.",
   "risk_management": [
-    "Innan något AI-system eller AI-verktyg implementeras måste en noggrann riskbedömning genomföras, med beaktande av potentiella effekter på integritet, säkerhet och andra riskområden.",
     "AI-system och AI-verktyg måste genomgå regelbundna revisioner och granskningar för att identifiera och minska risker samt säkerställa att de fortsätter att följa denna riktlinje.",
     "Eventuella problem eller incidenter som involverar AI bör omedelbart rapporteras till berörd chef, IT-avdelningen och Informationsansvarig."
   ],
-  "violation": "Brott mot denna riktlinje kan leda till disciplinära åtgärder, upp till och inklusive avsked. Rättsliga åtgärder kan också vidtas om en anställds åtgärder som involverar AI bedöms vara olagliga eller orsakar betydande skada för organisationen eller dess intressenter.",
+  "violation": "",
   "review": "Denna riktlinje kommer att ses över och uppdateras regelbundet för att säkerställa att den förblir relevant och effektiv i ljuset av nya AI-utvecklingar och Bostads AB Mimers föränderliga behov."
 }
