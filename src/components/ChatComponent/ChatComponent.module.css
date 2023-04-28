@@ -53,6 +53,7 @@
   flex-grow: 1;
   height: 3rem;
   margin-right: 1rem;
+  margin-left: 0.5rem;
   padding: 0.5rem;
   font-size: 1rem;
   border: 1px solid #ccc;
@@ -69,7 +70,8 @@
 .sendButton {
   height: 3rem;
   width: 5rem;
-  background-color: #e3205e;
+  background-color: #e3205e;x
+  margin-right: 0.5rem;
   color: #fff;
   border: none;
   border-radius: 5px;
