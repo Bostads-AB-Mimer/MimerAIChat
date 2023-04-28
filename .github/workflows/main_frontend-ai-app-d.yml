@@ -18,18 +18,15 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: Create .env file
-        run: |
-          echo "REACT_APP_API_URL=${{ secrets.REACT_APP_API_URL }}" >> .env
-          echo "REACT_APP_API_KEY=${{ secrets.REACT_APP_API_KEY }}" >> .env
-          echo "REACT_APP_AUTH0_DOMAIN=${{ secrets.REACT_APP_AUTH0_DOMAIN }}" >> .env
-          echo "REACT_APP_AUTH0_CLIENTID=${{ secrets.REACT_APP_AUTH0_CLIENTID }}" >> .env
-
       - name: npm install, build
         run: |
-          npm ci
-          npm install express
+          npm install
           npm run build --if-present
+
+      - name: Clean environment and reinstall dependencies
+        run: |
+          rm -rf node_modules
+          npm ci
 
       - name: Zip artifact for deployment
         run: |
@@ -57,6 +54,22 @@ jobs:
       - name: Unzip artifact for deployment
         run: |
           unzip release.zip
+
+      - name: Load environment variables from Azure
+        uses: Azure/appservice-settings@v1
+        with:
+          app-name: 'frontend-ai-app-d'
+          slot-name: 'Production'
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_E4E33FA3C68844B19731B4C527D34B26 }}
+          action: 'upload'
+          settings: '{
+            "appSettings": [
+              { "name": "REACT_APP_API_URL", "value": "${{ secrets.REACT_APP_API_URL }}" },
+              { "name": "REACT_APP_API_KEY", "value": "${{ secrets.REACT_APP_API_KEY }}" },
+              { "name": "REACT_APP_AUTH0_DOMAIN", "value": "${{ secrets.REACT_APP_AUTH0_DOMAIN }}" },
+              { "name": "REACT_APP_AUTH0_CLIENTID", "value": "${{ secrets.REACT_APP_AUTH0_CLIENTID }}" }
+            ]
+          }'
 
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
