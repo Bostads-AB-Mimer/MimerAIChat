@@ -27,13 +27,9 @@ jobs:
 
       - name: npm install, build
         run: |
-          npm install
-          npm run build --if-present
-
-      - name: Clean environment and reinstall dependencies
-        run: |
-          rm -rf node_modules
           npm ci
+          npm install express
+          npm run build --if-present
 
       - name: Zip artifact for deployment
         run: |
