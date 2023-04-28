@@ -13,7 +13,7 @@ const LoginButton = ({ clearError }) => {
         loginWithRedirect();
       }}
     >
-      Log In
+      Logga in
     </button>
   );
 };
