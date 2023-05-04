@@ -51,13 +51,29 @@
 
 .inputField {
   flex-grow: 1;
-  height: 3rem;
+  height: auto;
   margin-right: 1rem;
   margin-left: 0.5rem;
   padding: 0.5rem;
   font-size: 1rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  resize: none;
+  overflow-y: hidden;
+  max-height: calc(3rem * 6);
+}
+
+.textareaField {
+  flex-grow: 1;
+  height: auto;
+  margin-right: 1rem;
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  resize: none;
+  overflow: hidden;
 }
 
 .loginMessage {

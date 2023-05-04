@@ -179,7 +179,9 @@ const ChatComponent = () => {
     }
   };
 
-  const handleSend = async () => {
+  const handleSend = async (e) => {
+    e.preventDefault();
+
     if (input.trim() !== '') {
       setIsLoading(true);
       setMessages([...messages, { sender: 'user', content: input.trim() }]);
@@ -209,6 +211,19 @@ const ChatComponent = () => {
     }
   }, [messages]);
 
+  const handleInput = (e) => {
+    setInput(e.target.value);
+    const textarea = e.target;
+    const lines = e.target.value.split('\n');
+    textarea.style.height = 'auto'; //height to 'auto' to properly calculate the new height
+    textarea.style.height = `${textarea.scrollHeight}px`; //  height to the scroll height of the input
+    textarea.rows = Math.min(6, Math.max(1, lines.length)); //  maximum height constraint
+
+    if (lines.length === 1 && lines[0] === '') {
+      textarea.style.height = ''; // height when the content is below one row
+    }
+  };
+
   return (
     <div className={styles.container}>
       {isAuthenticated ? (
@@ -235,13 +250,15 @@ const ChatComponent = () => {
                     Tänker....
                   </div>
                 )}
-                <input
+                <textarea
                   className={styles.inputField}
-                  type="text"
+                  rows={1}
                   placeholder="Skriv ditt meddelande..."
                   value={input}
-                  onChange={(e) => setInput(e.target.value)}
-                  onKeyPress={(e) => e.key === 'Enter' && handleSend()}
+                  onChange={handleInput}
+                  onKeyDown={(e) =>
+                    e.key === 'Enter' && !e.shiftKey && handleSend(e)
+                  }
                   disabled={isLoading}
                 />
                 <button
