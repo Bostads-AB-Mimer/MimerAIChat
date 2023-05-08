@@ -100,6 +100,11 @@
   background-color: #3e8e41;
 }
 
+.sendButton.sendButtonDisabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
 .userMessage,
 .gptMessage {
   margin-bottom: 1rem; /* Adjust this value to create more or less space between messages */

@@ -184,7 +184,15 @@ const ChatComponent = () => {
 
     if (input.trim() !== '') {
       setIsLoading(true);
+
       setMessages([...messages, { sender: 'user', content: input.trim() }]);
+
+      setInput('');
+
+      // Reset textarea height
+      const textarea = document.querySelector(`.${styles.inputField}`);
+      textarea.style.height = '';
+      textarea.rows = 1;
 
       try {
         const apiResponse = await sendMessageToApi(input.trim(), user.email);
@@ -196,9 +204,8 @@ const ChatComponent = () => {
         console.error('Error while sending message to API:', error.message);
       } finally {
         setIsLoading(false);
+        textarea.focus(); // Focus the input field
       }
-
-      setInput('');
     }
   };
 
@@ -259,10 +266,12 @@ const ChatComponent = () => {
                   onKeyDown={(e) =>
                     e.key === 'Enter' && !e.shiftKey && handleSend(e)
                   }
-                  disabled={isLoading}
+                  /*disabled={isLoading}*/
                 />
                 <button
-                  className={styles.sendButton}
+                  className={`${styles.sendButton} ${
+                    isLoading ? styles.sendButtonDisabled : ''
+                  }`}
                   onClick={handleSend}
                   disabled={isLoading}
                 >
