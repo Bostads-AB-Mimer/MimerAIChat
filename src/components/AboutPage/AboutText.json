@@ -1,0 +1,9 @@
+{
+  "title": "Om Mimers AI-chatt",
+  "paragraphs": [
+    "Under det senaste halvåret har AI blivit mer tillgängligt, vilket öppnar upp nya möjligheter för både privatpersoner och företag. Mimers AI-chatt är baserad på OpenAIs ChatGPT-teknik, vilket möjliggör effektiv och mångsidig användning av AI i verksamhetsstöd.",
+    "Genom att sätta upp en egen AI-chatt kan Mimer få bättre kontroll över användningen och hålla nere licenskostnader. Detta inkluderar administration av användare och licenser, samt möjligheten att anpassa AI-chatten för specifika Mimer-fall.",
+    "För att säkerställa en effektiv användning av AI-chatten krävs riktlinjer, utbildning och integrering med befintliga system. Lösningen innefattar att upprätta ett API för att kommunicera med OpenAIs API och hantera användare, samt skapa ett gränssnitt för enkel åtkomst.",
+    "Mimers AI-chatt är ett viktigt steg för att omfamna och utnyttja potentialen av AI-teknik för att förbättra verksamhetens produktivitet och effektivitet."
+  ]
+}
