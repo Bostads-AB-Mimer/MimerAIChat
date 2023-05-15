@@ -4,7 +4,7 @@ import { customCodeTheme } from './customCodeTheme';
 import styles from './ChatComponent.module.css';
 import { useAuth0 } from '@auth0/auth0-react';
 import ClearHistoryButton from './ClearHistoryButton';
-import { ClipLoader } from 'react-spinners';
+import { DotLoader } from 'react-spinners';
 
 import { sendMessageToApi } from '../../api/aiApi';
 
@@ -14,6 +14,12 @@ const ChatComponent = () => {
   const [isLoading, setIsLoading] = useState(false);
   const messagesRef = useRef();
   const { isAuthenticated, user } = useAuth0();
+
+  const override: CSSProperties = {
+    display: 'block',
+    margin: '0 auto',
+    borderColor: 'red',
+  };
 
   const isCodeBlock = (content) => {
     const codeBlockRegex = /```[\s\S]*?```/;
@@ -277,7 +283,12 @@ const ChatComponent = () => {
                   disabled={isLoading}
                 >
                   {isLoading ? (
-                    <ClipLoader color="#ffffff" loading={true} size={15} />
+                    <DotLoader
+                      color="#ffffff"
+                      loading={true}
+                      size={15}
+                      cssOverride={override}
+                    />
                   ) : (
                     'Skicka'
                   )}
