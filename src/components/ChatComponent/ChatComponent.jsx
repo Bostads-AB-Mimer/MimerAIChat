@@ -15,12 +15,6 @@ const ChatComponent = () => {
   const messagesRef = useRef();
   const { isAuthenticated, user } = useAuth0();
 
-  const override: CSSProperties = {
-    display: 'block',
-    margin: '0 auto',
-    borderColor: 'red',
-  };
-
   const isCodeBlock = (content) => {
     const codeBlockRegex = /```[\s\S]*?```/;
     return codeBlockRegex.test(content);
@@ -267,7 +261,7 @@ const ChatComponent = () => {
                 <textarea
                   className={styles.inputField}
                   rows={1}
-                  placeholder="Skriv ditt meddelande..."
+                  placeholder="Skicka meddelande."
                   value={input}
                   onChange={handleInput}
                   onKeyDown={(e) =>
@@ -283,12 +277,7 @@ const ChatComponent = () => {
                   disabled={isLoading}
                 >
                   {isLoading ? (
-                    <DotLoader
-                      color="#ffffff"
-                      loading={true}
-                      size={15}
-                      cssOverride={override}
-                    />
+                    <DotLoader color="#ffffff" loading={true} size={15} />
                   ) : (
                     'Skicka'
                   )}
