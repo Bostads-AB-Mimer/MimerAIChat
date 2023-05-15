@@ -4,6 +4,7 @@ import { customCodeTheme } from './customCodeTheme';
 import styles from './ChatComponent.module.css';
 import { useAuth0 } from '@auth0/auth0-react';
 import ClearHistoryButton from './ClearHistoryButton';
+import { ClipLoader } from 'react-spinners';
 
 import { sendMessageToApi } from '../../api/aiApi';
 
@@ -275,7 +276,11 @@ const ChatComponent = () => {
                   onClick={handleSend}
                   disabled={isLoading}
                 >
-                  Skicka
+                  {isLoading ? (
+                    <ClipLoader color="#ffffff" loading={true} size={15} />
+                  ) : (
+                    'Skicka'
+                  )}
                 </button>
               </div>
             </div>
