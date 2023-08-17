@@ -255,7 +255,7 @@ const ChatComponent = () => {
               <div className={styles.inputContainer}>
                 {isLoading && (
                   <div className={`${styles.loadingMessage} ${styles.loading}`}>
-                    Tänker....
+                    Skriver ett meddelande...
                   </div>
                 )}
                 <textarea
