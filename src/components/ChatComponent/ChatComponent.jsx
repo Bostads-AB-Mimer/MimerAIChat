@@ -261,7 +261,7 @@ const ChatComponent = () => {
                 <textarea
                   className={styles.inputField}
                   rows={1}
-                  placeholder="Skicka meddelande. (Tänk på att inte dela med dig av känslig information/personuppgifter)"
+                  placeholder="Skicka meddelande (Tänk på att inte dela med dig av känslig information/personuppgifter)"
                   value={input}
                   onChange={handleInput}
                   onKeyDown={(e) =>
