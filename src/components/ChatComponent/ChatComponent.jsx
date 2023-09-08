@@ -106,7 +106,8 @@ const ChatComponent = () => {
     const messageIcon =
       message.sender === 'user' ? '/usericon.png' : '/happy_chatbot.png';
 
-    const table = generateTable(message.content);
+    // Commenting out the table logic
+  // const table = generateTable(message.content);
 
     if (isCodeBlock(message.content)) {
       return (
@@ -119,7 +120,7 @@ const ChatComponent = () => {
           {renderContent(message.content)}
         </div>
       );
-    } else if (table.isTable) {
+    } /* else if (table.isTable) {
       return (
         <div className={styles.messageContent}>
           <img
@@ -163,7 +164,7 @@ const ChatComponent = () => {
           </div>
         </div>
       );
-    } else {
+    }*/ else {
       return (
         <div className={styles.messageContent}>
           <img
