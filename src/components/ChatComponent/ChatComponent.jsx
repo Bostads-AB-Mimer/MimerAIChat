@@ -54,7 +54,7 @@ const ChatComponent = () => {
     );
   };
 
-  const generateTable = (content) => {
+ /* const generateTable = (content) => {
     const tableRegex = /(\|?[\w\s]+(?:\||\n))+(?:\|?-{3,}\|?)+(\n\|?[\w\s]+)+/;
     const tableMatch = content.match(tableRegex);
 
@@ -96,7 +96,7 @@ const ChatComponent = () => {
     selection.removeAllRanges();
 
     alert('Table copied to clipboard');
-  };
+  };*/
 
   const resetChat = () => {
     setMessages([]);
